@@ -1,0 +1,10 @@
+fortune #0: bla bla bla bla bla bla bla bla
+fortune #1: bla bla bla bla bla bla bla bla
+fortune #2: bla bla bla bla bla bla bla bla
+fortune #3: bla bla bla bla bla bla bla bla
+fortune #4: bla bla bla bla bla bla bla bla
+fortune #5: bla bla bla bla bla bla bla bla
+fortune #6: bla bla bla bla bla bla bla bla
+fortune #7: bla bla bla bla bla bla bla bla
+fortune #8: bla bla bla bla bla bla bla bla
+fortune #9: bla bla bla bla bla bla bla bla
