@@ -31,7 +31,6 @@ int main(int argc, char **argv) {
 		c = fgetc(fptr);
 		if(c == '\n') cookies++;
 	} while(c != EOF);
-	fclose(fptr);
 
 	/* now we choose a random item */
 	srand(time(NULL));
@@ -39,14 +38,9 @@ int main(int argc, char **argv) {
 
 	/* now we walk along db until we reach the chosen item,
          * then print, then exit. */
-	fptr = fopen(default_db[0], "r");
-	if(fptr == NULL) {
-		printf("error while opening '%s'\n", default_db[0]);
-		exit(-1);
-	}
+	rewind(fptr);	/* start over at beginning of file */
+	cookies = 0; 	/* we reuse cookies as counter */
 
-	/* we reuse cookies as counter */
-	cookies = 0;
 	while(fgets(linebuf, sizeof(linebuf), fptr) != NULL) {
 		if(cookies == cookie) {
 			printf("%s", linebuf);
@@ -56,7 +50,7 @@ int main(int argc, char **argv) {
 		cookies++;
 	}
 
-
+	fclose(fptr);
 
 	return 0;
 }
